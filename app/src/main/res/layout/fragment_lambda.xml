@@ -1,0 +1,14 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lambda.LambdaFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/btnLambda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lambda_blank_fragment" />
+
+</android.support.constraint.ConstraintLayout>

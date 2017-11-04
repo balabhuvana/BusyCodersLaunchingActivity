@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">BusyCoders-LaunchingActivity</string>
+    <string name="about">About</string>
+    <string name="help">Help</string>
+    <string name="title_activity_explict_intent">ExplictIntentActivity</string>
+    <string name="first_activity">First Activity</string>
+    <string name="title_activity_other">OtherActivity</string>
+    <string name="other_activity">Am Other Activity</string>
+    <string name="show_other_activity">Show Other Activity</string>
+    <string name="title_activity_implict">ImplictActivity</string>
+    <string name="url">URL</string>
+    <string name="show_me">Show Me</string>
+    <string name="title_activity_extras_demo">ExtrasDemoActivity</string>
+    <string name="title_activity_life_cycle_logging_first">LifeCycleLoggingFirstActivity</string>
+    <string name="title_activity_life_cycle_logging_second">LifeCycleLoggingSecondActivity</string>
+    <string name="title_activity_recycling_activity">RecyclingActivityA</string>
+    <string name="title_activity_recycling_b">RecyclingActivityB</string>
+    <string name="title_activity_recycling_c">RecyclingActivityC</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_dynamic_fragment">Hello Dynamic fragment</string>
+    <string name="title_activity_static_fragment_demo">StaticFragmentDemoActivity</string>
+    <string name="static_activity">Calling from Static Activity</string>
+    <string name="title_activity_other_list">OtherListActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_simple_content">SimpleContentActivity</string>
+    <string name="title_activity_view_pager_fragment_demo">ViewPagerFragmentDemoActivity</string>
+    <string name="hint">Editor # </string>
+    <string name="title_activity_retrofit">RetrofitActivity</string>
+    <string name="retrofit_fragment">retrofit fragment</string>
+    <string name="title_activity_ok_http_client">OkHttpClientActivity</string>
+    <string name="btn_okhttp">OkHttp</string>
+    <string name="btn_retrofit">Retrofit</string>
+    <string name="btn_service">Service</string>
+    <string name="title_activity_lambda">LambdaActivity</string>
+    <string name="lambda_blank_fragment">Hello Lambda fragment</string>
+    <string name="btn_lambda">Lambda</string>
+    <string name="btn_rxandroid">RXAndroid</string>
+    <string name="username">Username</string>
+    <string name="search">Search</string>
+    <string name="title_activity_rx_java_with_retrofit">RxJavaWithRetrofitActivity</string>
+    <string name="btn_rxjava_retrofit">RxJavaWithRetrofit</string>
+</resources>
