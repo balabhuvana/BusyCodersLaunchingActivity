@@ -29,6 +29,11 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import bala.test.com.busycoders_launchingactivity.R;
+import model.Menu;
+import model.MenuItem;
+import model.MoviePostData;
+import model.ResponseApi;
+import model.User;
 import okhttp3.Authenticator;
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -162,15 +167,16 @@ public class OkHttpClientFragment extends Fragment implements Runnable {
                 .build();
 
         try {
-            try (Response response = client.newCall(request).execute()) {
-                if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
 
-                Headers responseHeaders = response.headers();
-                for (int i = 0; i < responseHeaders.size(); i++) {
-                    Log.d(TAG, "" + responseHeaders.name(i) + ": " + responseHeaders.value(i));
-                }
-                Log.d(TAG, "" + response.body().string());
+            Response response = client.newCall(request).execute();
+            if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
+
+            Headers responseHeaders = response.headers();
+            for (int i = 0; i < responseHeaders.size(); i++) {
+                Log.d(TAG, "" + responseHeaders.name(i) + ": " + responseHeaders.value(i));
             }
+            Log.d(TAG, "" + response.body().string());
+
         } catch (IOException exp) {
             Log.d(TAG, "" + exp.toString());
         }
@@ -211,7 +217,8 @@ public class OkHttpClientFragment extends Fragment implements Runnable {
                 .build();
 
 
-        try (Response mResponse = client.newCall(mRequest).execute()) {
+        try {
+            Response mResponse = client.newCall(mRequest).execute();
             if (mResponse.isSuccessful()) {
                 Log.d(TAG, "" + mResponse.header("Server"));
                 Log.d(TAG, "" + mResponse.header("Date"));
@@ -236,7 +243,8 @@ public class OkHttpClientFragment extends Fragment implements Runnable {
                 .url("https://api.github.com/markdown/raw").post(RequestBody.create(MEDIA_TYPE_MARKDOWN, postBody))
                 .build();
 
-        try (Response mResponse = client.newCall(mRequest).execute()) {
+        try {
+            Response mResponse = client.newCall(mRequest).execute();
             if (mResponse.isSuccessful()) {
                 Log.d(TAG, "" + mResponse.body().string());
             }
@@ -275,7 +283,8 @@ public class OkHttpClientFragment extends Fragment implements Runnable {
                 .post(requestBody)
                 .build();
 
-        try (Response response = client.newCall(request).execute()) {
+        try {
+            Response response = client.newCall(request).execute();
             if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
 
             System.out.println(response.body().string());
@@ -305,7 +314,8 @@ public class OkHttpClientFragment extends Fragment implements Runnable {
         Request request = new Request.Builder()
                 .url("https://api.github.com/gists/c2a7c39532239ff261be")
                 .build();
-        try (Response response = client.newCall(request).execute()) {
+        try {
+            Response response = client.newCall(request).execute();
             if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
 
             String bodyString = response.body().string();
@@ -338,7 +348,8 @@ public class OkHttpClientFragment extends Fragment implements Runnable {
         Request request = new Request.Builder()
                 .url("http://www.codemobiles.com/adhoc/feed/youtubes.json")
                 .build();
-        try (Response response = client.newCall(request).execute()) {
+        try {
+            Response response = client.newCall(request).execute();
             if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
 
             String bodyString = response.body().string();
@@ -361,7 +372,8 @@ public class OkHttpClientFragment extends Fragment implements Runnable {
         Request request = new Request.Builder()
                 .url("http://demo5795376.mockable.io/testokhttp")
                 .build();
-        try (Response response = client.newCall(request).execute()) {
+        try {
+            Response response = client.newCall(request).execute();
             if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
 
             String bodyString = response.body().string();
@@ -443,7 +455,8 @@ public class OkHttpClientFragment extends Fragment implements Runnable {
         }, 1, TimeUnit.SECONDS);
 
         System.out.printf("%.2f Executing call.%n", (System.nanoTime() - startNanos) / 1e9f);
-        try (Response response = call.execute()) {
+        try {
+            Response response = call.execute();
             System.out.printf("%.2f Call was expected to fail, but completed: %s%n",
                     (System.nanoTime() - startNanos) / 1e9f, response);
         } catch (IOException e) {
@@ -503,11 +516,11 @@ public class OkHttpClientFragment extends Fragment implements Runnable {
                     .url("http://publicobject.com/secrets/hellosecret.txt")
                     .build();
 
-            try (Response response = client.newCall(request).execute()) {
-                if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
+            Response response = client.newCall(request).execute();
+            if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
 
-                System.out.println(response.body().string());
-            }
+            System.out.println(response.body().string());
+
         } catch (Exception exp) {
             exp.printStackTrace();
         }

@@ -1,4 +1,4 @@
-package okhttp;
+package model;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -11,13 +11,13 @@ import java.util.List;
 public class Menu {
 
     @SerializedName("id")
-    String id;
+    public String id;
 
     @SerializedName("value")
-    String value;
+    public String value;
 
     @SerializedName("menuitem")
-    List<MenuItem> menuitem;
+    public List<MenuItem> menuitem;
 
     public String getId() {
         return id;

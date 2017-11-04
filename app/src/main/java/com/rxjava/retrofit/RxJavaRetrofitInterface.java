@@ -2,18 +2,19 @@ package com.rxjava.retrofit;
 
 import java.util.List;
 
-import io.reactivex.Observable;
+
+import model.Menu;
 import model.MoviesResponse;
-import okhttp.Menu;
-import okhttp.ResponseApi;
-import okhttp.User;
-import okhttp.UserResponse;
+import model.ResponseApi;
+import model.User;
+import model.UserResponse;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
+import rx.Observable;
 
 /**
  * Created by bala on 30/10/17.

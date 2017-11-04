@@ -12,7 +12,7 @@ public class RxJavaWithRetrofitActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rx_java_with_retrofit);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutRxJavaRetrofit, RxJavaWithRetrofitFragment.newInstance("", "")).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutRxJavaRetrofit, RXjavaWithRetrofitFragment.newInstance("", "")).commit();
     }
 
 }

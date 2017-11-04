@@ -1,4 +1,4 @@
-package okhttp;
+package model;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -9,8 +9,8 @@ import com.google.gson.annotations.SerializedName;
 public class MenuItem {
 
     @SerializedName("name")
-    String name;
+    public String name;
 
     @SerializedName("type")
-    String type;
+    public String type;
 }

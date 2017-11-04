@@ -76,9 +76,6 @@
             android:name=".LambdaActivity"
             android:label="@string/title_activity_lambda" />
         <activity android:name="learn.rxandroid.LearnRxAndroidActivity" />
-        <activity android:name="learn.rxandroid.GitHubRxJavaRetrofitActivity">
-
-        </activity>
         <activity
             android:name="com.rxjava.retrofit.RxJavaWithRetrofitActivity"
             android:label="@string/title_activity_rx_java_with_retrofit">

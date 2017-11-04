@@ -18,13 +18,13 @@ import com.google.gson.Gson;
 import java.util.List;
 
 import bala.test.com.busycoders_launchingactivity.R;
+import model.Menu;
 import model.Movie;
+import model.MoviePostData;
 import model.MoviesResponse;
-import okhttp.Menu;
-import okhttp.MoviePostData;
-import okhttp.ResponseApi;
-import okhttp.User;
-import okhttp.UserResponse;
+import model.ResponseApi;
+import model.User;
+import model.UserResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

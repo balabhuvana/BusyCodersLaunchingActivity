@@ -1,15 +1,17 @@
-package okhttp;
+package model;
 
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by bala on 18/10/17.
+ * Created by bala on 19/10/17.
  */
 
-public class MovieResponseData {
+public class UserResponse {
+
+    @SerializedName("name")
+    public String name;
 
     @SerializedName("job")
-
     public String job;
 
     @SerializedName("id")
@@ -18,6 +20,13 @@ public class MovieResponseData {
     @SerializedName("createdAt")
     public String createdAt;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getJob() {
         return job;
@@ -42,6 +51,4 @@ public class MovieResponseData {
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
-
-
 }

@@ -12,6 +12,6 @@ public class LearnRxAndroidActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learn_rx_android);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutRxAndroid, ColorsFragment.newInstance("", "")).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutRxAndroid, RXAndroidWithRetrofitFragment.newInstance("", "")).commit();
     }
 }
