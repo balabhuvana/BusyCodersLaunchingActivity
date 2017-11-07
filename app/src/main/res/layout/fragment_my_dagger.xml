@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="learning.dagger.MyDaggerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tvDagger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dagger_fragment" />
+
+    <Button
+        android:id="@+id/btnDagger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDagger"
+        android:text="@string/btn_dagger" />
+
+    <Button
+        android:id="@+id/btnRetrofit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDagger"
+        android:text="@string/btn_retrofit" />
+
+</RelativeLayout>

@@ -42,4 +42,6 @@
     <string name="search">Search</string>
     <string name="title_activity_rx_java_with_retrofit">RxJavaWithRetrofitActivity</string>
     <string name="btn_rxjava_retrofit">RxJavaWithRetrofit</string>
+    <string name="btn_dagger">Dagger</string>
+    <string name="dagger_fragment">Dagger Fragment</string>
 </resources>
